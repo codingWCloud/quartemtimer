@@ -11,8 +11,8 @@ const updateCountAndPercentage = () => {
   currentTime++;
   currentPercentage = (currentTime / totalTimeInSeconds) * 100;
   const formattedPercentage = Math.floor(currentPercentage)
-    .toString()
-    .padStart(2, "0");
+   .toString()
+   .padStart(2, "0");
   const percentageDisplay = document.getElementById("percentage");
   percentageDisplay.textContent = `${formattedPercentage}%`;
 
@@ -23,7 +23,7 @@ const updateCountAndPercentage = () => {
     totalTimeInSeconds = totalTime * 60;
     currentPercentage = 0;
     currentTime = 0;
-    const counterDisplay = document.getElementById("counter");
+    const counterDisplay = document.getElementById("count");
     counterDisplay.textContent = `Count: ${counter}`;
     const percentageDisplay = document.getElementById("percentage");
     percentageDisplay.textContent = `00%`;
@@ -35,8 +35,8 @@ const updateCountAndPercentage = () => {
         currentTime++;
         currentPercentage = (currentTime / totalTimeInSeconds) * 100;
         const formattedPercentage = Math.floor(currentPercentage)
-          .toString()
-          .padStart(2, "0");
+         .toString()
+         .padStart(2, "0");
         const percentageDisplay = document.getElementById("percentage");
         percentageDisplay.textContent = `${formattedPercentage}%`;
 
@@ -77,7 +77,7 @@ resetButton.addEventListener("click", () => {
   counter = 0;
   totalTime = 15;
   totalTimeInSeconds = totalTime * 60;
-  document.getElementById("counter").textContent = `Count: ${counter}`;
+  document.getElementById("count").textContent = `Count: ${counter}`;
   document.getElementById("percentage").textContent = `00%`;
   document.querySelector(".display").textContent = "00:00:00";
   isRunning = false;
